@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rumah Sakit</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        color: #333;
+      }
+
+      .container {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1200px;
+      }
+
+      header {
+        background: #f8f8f8;
+        padding: 10px 0;
+        border-bottom: 1px solid #e7e7e7;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      header .logo {
+        font-size: 30px;
+        font-weight: bold;
+        padding-top: 10px;
+      }
+
+      header nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      header nav ul li {
+        margin-left: 20px;
+      }
+
+      header nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+      }
+
+      .hero {
+        background: url("hospital.jpg") no-repeat center center/cover;
+        color: #fff;
+        text-align: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: -50px;
+        position: relative;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero p {
+        font-size: 24px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+      }
+
+      .hero video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      .layanan,
+      .dokter {
+        padding: 60px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .layanan h2,
+      .dokter h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      .cards {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        background: #f8f8f8;
+        padding: 20px;
+        border-radius: 10px;
+        width: 30%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 10px 0;
+      }
+
+      .card h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .card p {
+        font-size: 16px;
+      }
+
+      .dokter-profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+
+      .dokter-profile img {
+        border-radius: 50%;
+        width: auto;
+        height: auto;
+        max-width: 150px;
+        max-height: 150px;
+        margin-bottom: 20px;
+      }
+
+      .dokter-profile h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .dokter-profile p {
+        font-size: 16px;
+        text-align: center;
+        max-width: 300px;
+      }
+
+      footer {
+        background: #f8f8f8;
+        padding: 20px 0;
+        text-align: center;
+        border-top: 1px solid #e7e7e7;
+      }
+
+      footer p {
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">RS WIJAYA</div>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#layanan">Layanan</a></li>
+            <li><a href="#dokter">Dokter</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="hero" id="home">
+      <video autoplay muted loop>
+        <source src="Video/home.mp4" type="video/mp4" />
+        Browser Anda tidak mendukung tag video.
+      </video>
+      <div class="container">
+        <h1>Selamat Datang di Rumah Sakit Kami</h1>
+        <p>Pelayanan terbaik untuk kesehatan Anda.</p>
+      </div>
+    </section>
+    <section class="layanan" id="layanan">
+      <div class="container">
+        <h2>Layanan Kami</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Rawat Inap</h3>
+            <p>Pelayanan rawat inap dengan fasilitas lengkap dan nyaman.</p>
+          </div>
+          <div class="card">
+            <h3>Rawat Jalan</h3>
+            <p>
+              Konsultasi dengan dokter spesialis kami secara cepat dan efisien.
+            </p>
+          </div>
+          <div class="card">
+            <h3>IGD</h3>
+            <p>
+              Pelayanan Instalasi Gawat Darurat 24 jam untuk keadaan darurat
+              Anda.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="dokter" id="dokter">
+      <div class="container">
+        <h2>Dokter Kami</h2>
+        <div class="dokter-profile">
+          <img src="Images/dr andi.jpeg" alt="Dr. Andi Wijaya" />
+          <h3>Dr. Andi Wijaya</h3>
+          <p>Spesialis Bedah Umum dengan pengalaman lebih dari 15 tahun.</p>
+        </div>
+        <div class="dokter-profile">
+          <img src="Images/dr siti.jpeg" alt="Dr. Siti Aminah" />
+          <h3>Dr. Siti Aminah</h3>
+          <p>
+            Spesialis Penyakit Dalam yang ahli dalam menangani berbagai kondisi
+            kesehatan.
+          </p>
+        </div>
+        <div class="dokter-profile">
+          <img src="Images/dr budi.jpeg" alt="Dr. Budi Santoso" />
+          <h3>Dr. Budi Santoso</h3>
+          <p>
+            Spesialis Anak yang berpengalaman dalam menangani kesehatan
+            anak-anak.
+          </p>
+        </div>
+        <div class="dokter-profile">
+          <img src="Images/dr maya.jpeg" alt="Dr. Maya Kusuma" />
+          <h3>Dr. Maya Kusuma</h3>
+          <p>
+            Spesialis Gigi dan Mulut dengan dedikasi tinggi terhadap kesehatan
+            gigi pasien.
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer id="kontak">
+      <div class="container">
+        <p>Kontak: (021) 123-4567 | Email: info@rumahsakitwijaya.com</p>
+        <p>&copy; 2024 Rumah Sakit Wijaya. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
